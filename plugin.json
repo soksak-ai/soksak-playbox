@@ -49,6 +49,16 @@
         "ko": "웹페이지에서 미디어 스트림을 추출할 때 최대 대기 시간.",
         "en": "Maximum wait when extracting a media stream from a web page."
       }
+    },
+    {
+      "key": "downloadDir",
+      "type": "string",
+      "default": "",
+      "title": { "ko": "다운로드 폴더", "en": "Download folder" },
+      "description": {
+        "ko": "다운로드를 저장할 폴더(절대경로). 비어 있으면 다운로드 버튼이 폴더 지정을 요청합니다.",
+        "en": "Absolute folder where downloads are saved. If empty, the download button asks you to set it first."
+      }
     }
   ],
   "permissions": [
@@ -96,6 +106,7 @@
       { "name": "play", "title": { "ko": "재생", "en": "Play" }, "danger": "inject" },
       { "name": "clip.add", "title": { "ko": "클립 추가", "en": "Add clip" } },
       { "name": "clip.list", "title": { "ko": "클립 목록", "en": "List clips" } },
+      { "name": "download", "title": { "ko": "다운로드", "en": "Download" }, "danger": "inject" },
       { "name": "doctor", "title": { "ko": "의존성 점검", "en": "Doctor" } },
       { "name": "setup", "title": { "ko": "의존성 설치", "en": "Setup deps" }, "danger": "inject" }
     ],
@@ -124,6 +135,7 @@
       { "id": "clip-start", "description": { "en": "Mark clip start", "ko": "클립 시작 표시" } },
       { "id": "clip-end", "description": { "en": "Mark clip end and save", "ko": "클립 끝 표시·저장" } },
       { "id": "close", "description": { "en": "Close current media", "ko": "현재 미디어 닫기" } },
+      { "id": "download", "description": { "en": "Download current media (full or marked clip)", "ko": "현재 미디어 저장(전체 또는 표시 구간)" } },
       { "id": "flash", "description": { "en": "Transient status message", "ko": "일시 상태 메시지" } },
       { "id": "error", "description": { "en": "Resolve/playback error message", "ko": "해석/재생 오류 메시지" } },
       { "id": "lib-input", "description": { "en": "Library add-URL input", "ko": "라이브러리 URL 추가 입력" } },
